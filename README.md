@@ -248,23 +248,10 @@ To reset all data and start fresh:
 ---
 
 ## Deployment
+**Frontend**: Vercel
+**Backend**: Render
+- Note: The backend is hosted on Render's free tier and may take up to 50 seconds to wake up on first load after a period of inactivity. Please wait briefly if the login appears slow on the first attempt.
 
-### Frontend (Vercel)
-1. Push this repository to GitHub
-2. Go to vercel.com → New Project → Import your repo
-3. Set Root Directory to `frontend`
-4. Add environment variable: `VITE_API_URL` = your Render backend URL
-5. Deploy
-
-### Backend (Render)
-1. Go to render.com → New Web Service → Connect your repo
-2. Set Root Directory to `backend`
-3. Build Command: `npm install`
-4. Start Command: `node server.js`
-5. Add environment variables:
-   - `JWT_SECRET` = any long random string
-   - `NODE_ENV` = `production`
-   - `FRONTEND_URL` = your Vercel frontend URL
 
 ---
 
